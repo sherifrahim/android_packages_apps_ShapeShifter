@@ -246,4 +246,7 @@
     <string name="overlay_theme_title">Theme overlays</string>
     <string name="overlay_theme_summary">Manage theme overlays</string>
 
+    <!-- Screen off fod -->
+    <string name="fod_gesture_title">Screen off FOD</string>
+    <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
 </resources>
