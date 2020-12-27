@@ -58,13 +58,24 @@ public class VolumeRocker extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String VOLUME_PANEL_ALIGNMENT = "volume_panel_alignment";
 
     private ListPreference mVolumeKeyCursorControl;
+    private ListPreference mVolumeAlignment;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.volume_rocker);
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        // set volume alignment
+        mVolumeAlignment = (ListPreference) findPreference(VOLUME_PANEL_ALIGNMENT);
+        int align = Settings.System.getInt(resolver,
+                Settings.System.VOLUME_PANEL_ALIGNMENT, 1);
+        mVolumeAlignment.setValue(String.valueOf(align));
+        mVolumeAlignment.setSummary(mVolumeAlignment.getEntry());
+        mVolumeAlignment.setOnPreferenceChangeListener(this);
 
         // volume key cursor control
         mVolumeKeyCursorControl = (ListPreference) findPreference(VOLUME_KEY_CURSOR_CONTROL);
@@ -87,6 +98,13 @@ public class VolumeRocker extends SettingsPreferenceFragment implements
                     .findIndexOfValue(volumeKeyCursorControl);
             mVolumeKeyCursorControl
                     .setSummary(mVolumeKeyCursorControl.getEntries()[volumeKeyCursorControlIndex]);
+            return true;
+        } else if (preference == mVolumeAlignment) {
+            int align = Integer.valueOf((String) newValue);
+            int index = mVolumeAlignment.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_PANEL_ALIGNMENT, align);
+            mVolumeAlignment.setSummary(mVolumeAlignment.getEntries()[index]);
             return true;
         }
         return false;

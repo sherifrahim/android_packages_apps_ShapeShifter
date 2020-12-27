@@ -37,4 +37,36 @@
         android:summary="@string/swap_volume_buttons_summary"
         android:defaultValue="false" />
 
+    <com.ssos.support.preferences.SystemSettingSwitchPreference
+        android:key="synthos_music_volume_panel_text"
+        android:summary="@string/synthos_music_volume_panel_text_summary"
+        android:title="@string/synthos_music_volume_panel_text_title"
+        android:defaultValue="true" />
+
+    <ListPreference
+        android:key="volume_panel_alignment"
+        android:title="@string/synthos_volume_panel_alignment_title"
+        android:summary="%s"
+        android:dialogTitle="@string/synthos_volume_panel_alignment_title"
+        android:entries="@array/volume_alignment_entries"
+        android:entryValues="@array/volume_alignment_values"
+        android:defaultValue="1"
+        android:persistent="false" />
+
+    <com.ssos.support.preferences.SystemSettingSeekBarPreference
+        android:key="synthos_volume_panel_padding_top"
+        android:title="@string/synthos_volume_panel_padding_top_title"
+        android:max="100"
+        android:min="0"
+        settings:units="dp"
+        android:defaultValue="20" />
+
+    <com.ssos.support.preferences.SystemSettingSeekBarPreference
+        android:key="synthos_volume_panel_padding_bottom"
+        android:title="@string/synthos_volume_panel_padding_bottom_title"
+        android:max="100"
+        android:min="0"
+        settings:units="dp"
+        android:defaultValue="20" />
+
 </PreferenceScreen>
