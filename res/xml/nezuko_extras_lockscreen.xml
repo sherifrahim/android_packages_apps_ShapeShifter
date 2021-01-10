@@ -24,6 +24,11 @@
           android:title="@string/volume_rocker_music_controls_title"
 	     android:defaultValue="false" />
 
+    <com.nezuko.support.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_lock_icon"
+        android:title="@string/lockscreen_lock_icon_title"
+        android:summary="@string/lockscreen_lock_icon_summary"
+        android:defaultValue="true" />
 
 <PreferenceCategory
             android:title="@string/buttons">

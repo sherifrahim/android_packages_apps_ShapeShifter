@@ -301,4 +301,11 @@
     <string name="fod_icon_animation_zaid_oneui">Samsung OneUI 3</string>
     <string name="fod_icon_animation_oneui2">Samsung OneUI 2</string>
     <string name="fod_icon_animation_oos">OnePlus OxygenOS 11</string>
+
+    <!-- Lockscreen blur -->
+    <string name="lockscreen_blur_title">Background blur</string>
+
+    <!-- Lock Icon -->
+    <string name="lockscreen_lock_icon_title">Lock icon</string>
+    <string name="lockscreen_lock_icon_summary">Display lock icon on the lockscreen</string>
 </resources>
