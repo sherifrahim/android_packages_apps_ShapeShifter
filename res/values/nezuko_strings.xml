@@ -246,11 +246,16 @@
     <string name="overlay_theme_title">Theme overlays</string>
     <string name="overlay_theme_summary">Manage theme overlays</string>
 
+    <string name="lockscreen_fod_category">Fingerprint On Display</string>
+
     <!-- Screen off fod -->
     <string name="fod_gesture_title">Screen off FOD</string>
     <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
 
 	<!-- FOD Animations -->
+    <string name="fod_recog_animation">Fingerprint animation</string>
+    <string name="fod_recog_animation_summary">Shows an animation while reading your finger</string>
+    <string name="fod_recog_animation_effect_title">Select fingerprint animation effect</string>
     <string name="fod_recog_animation_miui_normal">Xiaomi default</string>
     <string name="fod_recog_animation_miui_aod">Xiaomi AOD</string>
     <string name="fod_recog_animation_miui_aurora">Xiaomi Aurora (K30 Pro)</string>
@@ -275,6 +280,10 @@
     <string name="fod_recog_animation_rog_fusion">Asus Fusion</string>
     <string name="fod_recog_animation_rog_pulsar">Asus Pulsar</string>
     <string name="fod_recog_animation_rog_supernova">Asus Supernova</string>
+    <string name="fod_recog_animation_shine">Oppo Shine</string>
+    <string name="fod_recog_animation_smoke">Realme Smoke</string>
+    <string name="fod_recog_animation_strings">Realme Strings</string>
+    <string name="fod_recog_animation_quantum">Realme Quantum</string>
 
     <!-- FOD pressed color -->
     <string name="fod_pressed_color_title">Fingerprint pressed color</string>
