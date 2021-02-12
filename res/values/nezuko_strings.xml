@@ -249,4 +249,30 @@
     <!-- Screen off fod -->
     <string name="fod_gesture_title">Screen off FOD</string>
     <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
+
+	<!-- FOD Animations -->
+    <string name="fod_recog_animation_miui_normal">Xiaomi default</string>
+    <string name="fod_recog_animation_miui_aod">Xiaomi AOD</string>
+    <string name="fod_recog_animation_miui_aurora">Xiaomi Aurora (K30 Pro)</string>
+    <string name="fod_recog_animation_miui_aurora_cas">Xiaomi Aurora (Mi 10 Ultra)</string>
+    <string name="fod_recog_animation_miui_light">Xiaomi Light</string>
+    <string name="fod_recog_animation_miui_pop">Xiaomi Pop</string>
+    <string name="fod_recog_animation_miui_pulse">Xiaomi Pulse</string>
+    <string name="fod_recog_animation_miui_pulse_white">Xiaomi Pulse (White)</string>
+    <string name="fod_recog_animation_miui_rhythm">Xiaomi Rhythm</string>
+    <string name="fod_recog_animation_miui_star_cas">Xiaomi Starlight</string>
+    <string name="fod_recog_animation_op_cosmos">OnePlus Cosmos</string>
+    <string name="fod_recog_animation_op_energy">OnePlus Energy</string>
+    <string name="fod_recog_animation_op_mclaren">OnePlus McLaren</string>
+    <string name="fod_recog_animation_op_ripple">OnePlus Ripple</string>
+    <string name="fod_recog_animation_op_scanning">OnePlus Cyberpunk 2077</string>
+    <string name="fod_recog_animation_op_stripe">OnePlus Stripe</string>
+    <string name="fod_recog_animation_op_wave">OnePlus Wave</string>
+    <string name="fod_recog_animation_pureview_dna">Nokia DNA</string>
+    <string name="fod_recog_animation_pureview_future">Nokia Future</string>
+    <string name="fod_recog_animation_pureview_halo_ring">Nokia Halo ring</string>
+    <string name="fod_recog_animation_pureview_molecular">Nokia Molecular</string>
+    <string name="fod_recog_animation_rog_fusion">Asus Fusion</string>
+    <string name="fod_recog_animation_rog_pulsar">Asus Pulsar</string>
+    <string name="fod_recog_animation_rog_supernova">Asus Supernova</string>
 </resources>
