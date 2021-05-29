@@ -32,6 +32,10 @@ import android.os.Bundle;
 import android.provider.Settings;
 import androidx.preference.*;
 
+import com.nezuko.support.preferences.SystemSettingSwitchPreference;
+import com.nezuko.support.preferences.SystemSettingSeekBarPreference;
+import com.nezuko.support.preferences.SwitchPreference;
+
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -39,6 +43,7 @@ import com.android.settings.SettingsPreferenceFragment;
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
     private ContentResolver mResolver;
 
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
@@ -66,7 +71,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 	Preference AnimaTogglePref = (Preference) findPreference("fod_recognizing_animation");
         Preference AnimaListPref = (Preference) findPreference("fod_recognizing_animation_list");            
 
-        if (!com.android.internal.util.ssos.Utils.isPackageInstalled(mContext,"com.ssos.fod.animations")) {
+        if (!com.android.internal.util.nezuko.Utils.isPackageInstalled(mContext,"com.nezuko.fod.animations")) {
             overallPreferences.removePreference(AnimaTogglePref);
             overallPreferences.removePreference(AnimaListPref);                
         
@@ -84,7 +89,9 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                 Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, 0);
         mTorchLongPressPowerTimeout.setValue(Integer.toString(TorchTimeout));
         mTorchLongPressPowerTimeout.setSummary(mTorchLongPressPowerTimeout.getEntry());        
-
+        mLockscreenBlur = (SystemSettingSeekBarPreference) findPreference(KEY_LOCKSCREEN_BLUR);
+        if (!com.ssos.shapeshifter.utils.Utils.isBlurSupported()) {
+            mLockscreenBlur.setVisible(false);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
