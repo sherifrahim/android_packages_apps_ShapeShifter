@@ -94,6 +94,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             mLockscreenBlur.setVisible(false);
     }
 
+}
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
@@ -116,4 +117,5 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.NEZUKO;
     }
 
+}
 }

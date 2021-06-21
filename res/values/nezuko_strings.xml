@@ -309,6 +309,4 @@
     <string name="lockscreen_lock_icon_title">Lock icon</string>
     <string name="lockscreen_lock_icon_summary">Display lock icon on the lockscreen</string>
 
-    <!-- Lockscreen blur -->
-    <string name="lockscreen_blur_title">Background blur</string>
 </resources>
